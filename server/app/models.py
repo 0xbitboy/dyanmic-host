@@ -56,6 +56,7 @@ class Agent(db.Model):
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
     remark = db.Column(db.String(256))
     status = db.Column(db.Integer) #1,0
+    default_group_sid = db.Column(db.String(18),db.ForeignKey('agent_groups.sid'))
     create_time = db.Column(db.DateTime)
     update_time = db.Column(db.DateTime)
     __table_args__ = (

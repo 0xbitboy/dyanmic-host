@@ -24,9 +24,13 @@ def json(f):
 
         # if the response was a database model, then convert it to a
         # dictionary
-        if not isinstance(rv, dict):
+        if not isinstance(rv, (dict,list)):
             rv = rv.export_data()
-
+        elif isinstance(rv,list) :
+            rvJson = []
+            for ob in rv:
+                rvJson.append(ob.export_data())
+            rv = rvJson
         # generate the JSON response
         rv = jsonify(rv)
         if status is not None:
