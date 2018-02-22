@@ -41,7 +41,7 @@ def getAgentKey():
         if baseGroup is None:
             baseGroup = AgentGroup(name='all',user_id=agent.user_id,sid="%d@%s"%(agent.user_id,random_str(8)))
             db.session.add(baseGroup)
-            agent.default_group_sid = baseGroup.sid
+        agent.default_group_sid = baseGroup.sid
         db.session.add(agent)
         db.session.commit()
         return agent

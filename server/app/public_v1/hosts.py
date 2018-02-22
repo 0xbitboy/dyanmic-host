@@ -23,7 +23,7 @@ def getHostfle(group_sid):
          agents = Agent.query.filter(Agent.default_group_sid==group_sid).filter(Agent.status==1).all()
          for agent in agents:
              updateTimeStr = agent.update_time.strftime("%Y-%m-%d %H:%M:%S")
-             hostsText += ("#%s,update_time=%s \n%s %s"%(agent.remark,updateTimeStr,agent.ip,agent.host_name))
+             hostsText += ("#agent_id=%s,update_time=%s,%s \n%s %s\n"%(agent.id,updateTimeStr,agent.remark,agent.ip,agent.host_name))
     response = Response(hostsText,mimetype="text/html")
     return response
 
