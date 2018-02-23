@@ -2,3 +2,4 @@ server/env
 *.pyc
 .vscode
 *.sqlite
+agent/windows/env
