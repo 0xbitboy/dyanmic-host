@@ -3,3 +3,5 @@ server/env
 .vscode
 *.sqlite
 agent/windows/env
+*.spec
+agent/all/env
