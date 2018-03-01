@@ -32,7 +32,10 @@ class Agent:
         data = parse.urlencode(data).encode('utf-8')
         print("Prepare to report agent info to the cloud.->"+self.report_url)
         req = request.Request(self.report_url, data=data)
-        page = request.urlopen(req).read()
+        try:
+            page = request.urlopen(req).read()
+        except:
+            print("ERROR:report host info fail! [%s] is unavailable")
         page = page.decode('utf-8') 
         print("Result:"+page)
     def syncHostFile(self):
