@@ -43,7 +43,7 @@ sync 同步host文件到本地
 - 在线host文件:/public/v1/host/{gropId}/hostfile
 - demo:[http://host.liaojiacan.me/public/v1/hosts/1@RMl0Au9D/hostfile](http://host.liaojiacan.me/public/v1/hosts/1@RMl0Au9D/hostfile)
 
-# plan
+# next
 - agent install script
 - 管理后台
 
