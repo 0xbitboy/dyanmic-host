@@ -68,7 +68,7 @@ getIp(){
   if [ -z "$ip" ] ; then
     ip=$(ifconfig $NETWORK_INTERFACE | awk '/inet /{print $2}') 
   fi
-  echo $ip
+  echo $ip | grep -E -o '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}'
   return 1
 }
 
