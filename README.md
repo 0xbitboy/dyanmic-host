@@ -1,9 +1,9 @@
 # dyanmic-host
 A solution for sync host file between lot of machine which are using DHCP
 
-编写这个项目的初衷是为了管理开发环境的一些虚拟机，为了可以更好的融合到办公网中，虚拟集群用的是桥接网络，也就是跟办公网使用的是DHCP的，这就导致有时候IP会变，需要去把集群中的host文件修改过来，这就很麻烦，所以想通过一个agent主动上报到云端，然后开发机可以同步在线的host文件下来。比如使用[SwitchHosts](https://github.com/oldj/SwitchHosts) 来管理host文件
+编写这个项目的初衷是为了管理开发环境的一些虚拟机，为了可以更好的融合到办公网中，虚拟集群用的是桥接网络，也就是跟办公网使用的是DHCP的，这就导致有时候IP会变，需要去把集群中的host文件修改过来，这就很麻烦，所以想通过一个agent主动上报到云端，然后开发机可以同步在线的host文件下来。比如使用[SwitchHosts](https://github.com/oldj/SwitchHosts) 来管理host文件
 
-# 主要功能
+# 主要功能
 1. 上报机器的hostname和ip到云端
 2. 云端可以管理机器上报来的信息（管理后台开发中）
 3. 集群分组，在线host文件生成 （/public/v1/host/{gropId}/hostfile)
